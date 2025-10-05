@@ -1,5 +1,4 @@
-get dog right now
-Walk dog
+get dog
+Walk dog later
 Get up
-Wotcha
-Amazing
+

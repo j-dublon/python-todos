@@ -4,9 +4,10 @@ def get_todos(filepath="todos.txt"):
     """
     with open(filepath, 'r') as todos_file:
         fetched_todos = todos_file.readlines()
+        print("Fetched todos:", fetched_todos)
         return fetched_todos
 
-def add_todo(new_todos, filepath="todos.txt"):
+def write_todos(new_todos, filepath="todos.txt"):
     """ Write the to do items list in a text file """
     with open(filepath, 'w') as todos_file:
         todos_file.writelines(new_todos)

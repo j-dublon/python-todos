@@ -1,4 +1,4 @@
-from functions import get_todos, add_todo
+from functions import get_todos, write_todos
 import time
 
 now = time.strftime("%b %d, %Y %H:%M:%S")
@@ -14,7 +14,7 @@ while True:
 
         todos.append(todo.capitalize() + "\n")
 
-        add_todo(todos, 'todos.txt')
+        write_todos(todos, 'todos.txt')
 
     elif user_action.startswith('show'):
         todos = get_todos()
@@ -32,7 +32,7 @@ while True:
             new_todo = input("Enter new todo: ")
             todos[number] = new_todo + "\n"
 
-            add_todo(todos, 'todos.txt')
+            write_todos(todos, 'todos.txt')
 
         except ValueError:
             print("Your command is not valid")
@@ -48,7 +48,7 @@ while True:
             todo_to_remove = todos[index].strip("\n")
             todos.pop(index)
 
-            add_todo(todos, 'todos.txt')
+            write_todos(todos, 'todos.txt')
 
             message = f"{todo_to_remove} was removed from list"
             print(message)
